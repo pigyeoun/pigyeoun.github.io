@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    *{margin:0; padding:0;}
+    li{list-style:none;}
+    a{text-decoration:none; color:rgb(70, 70, 70);}
+
+    .clear{clear:both;
+           content:'';
+           display:block;}
+
+    .popup1{width:2000px; height:150px; background-color:black; margin:0 auto;}
+    .popup2{position:fixed; z-index:999; bottom:-100px; left:-70px;}
+    .wrap{background-color:peru; width:100%; height:6000px;}
+
+    .header_01{width:100%; height:29px; border-bottom:1px solid grey; background-color:white;}
+    .header_01_inner{width:1200px; height:30px; margin:0 auto;}
+    .headermainmenu{font-size:12px; margin-top:10px;}
+    .headermainmenu > li{float:left; text-align:center; width:60px; line-height:20px; position:relative;}
+    .headermainmenu > li:hover{border-top:1px solid black;}
+    .headermainmenu li:hover > a{color:black;}
+    .headersubmenu li{font-size:9px; background-color:white;}
+    .headersubmenu li:hover{background-color:rgb(227, 227, 227);}
+    .headersubmenu{display:none; position:absolute; z-index:999; border:1px solid grey; width:80px;}
+    .headersubmenu1:hover .headersubmenu{display:block;}
+
+    .search{float:right; margin-right:30px;}
+    .icon1{float:right;}
+    .box1{width:25px; height:25px; background-color:cyan; float:left; margin-right:5px;}
+    .box2{width:25px; height:25px; background-color:magenta; float:left; margin-right:5px;}
+    .box3{width:25px; height:25px; background-color:yellow; float:left; margin-right:5px;}
+    .box4{width:25px; height:25px; background-color:black; float:left; margin-right:20px;}
+
+    .header_02{width:100%; height:159px; background-color:white; border-bottom:1px solid black;}
+    .header_02_inner{width:1200px; margin:0 auto; padding-top:28px;}
+    .slide1{width:100px; height:100px; background-color:skyblue; float:left; margin-left:100px;}
+    .logo{width:500px; height:100px; background-color:pink; float:left; margin-left:150px;}
+    .logo:hover{background-color:purple;}
+    .butt{width:100px; height:100px; float:left; margin-left:150px; position:relative;}
+    .butt #heart1{position:absolute; top:0; left:0;}
+    .butt #heart2{position:absolute; top:0; left:0;}
+    .butt:hover #heart1{display:none;}
+
+    .header_03{width:100%; height:50px; border-top:1px solid black; border-bottom:1px solid grey; background-color:white;}
+    .header_03_inner{width:1300px;height:50px; margin:0 auto;}
+    .allmenu_butt{width:60px; height:50px; background-color:rgb(89, 89, 89); float:left;}
+    .allmenu_butt:hover{background-color:rgb(40,40,40);}
+    .allmenu{float:left;}
+    .allmainmenu{font-size:12px; margin-top:10px;}
+    .allmainmenu > li{float:left; text-align:center; width:75px; line-height:30px; position:relative;}
+    .allmainmenu > li:hover > a{color:black; font-weight:bold;}
+    .allmenusub{position:absolute;; z-index:999; display:none; line-height:25px; border:1px solid grey; width:140px;}
+    .allmenusub li{background-color:white; text-align:left; padding-left:10px; font-size:11px;}
+    .allmenusub li:hover{background-color:rgb(227,227,227);}
+    .allmenusub_butt:hover .allmenusub{display:block;}
+
+    .allmenu2{float:left;}
+    .allmainmenu2{font-size:12px;}
+    .allmainmenu2 >li{float:left; text-align:center; width:75px; height:40px; line-height:30px; background-color:grey; padding-top:10px; position:relative;}
+    .allmainmenu2 >li:hover > a{color:black; font-weight:bold;}
+    .allmainmenu2 .allmenusub2li:hover .allmenusub2{display:block;}
+    .allmenusub2{position:absolute; z-index:999; width:200px; background-color:white; border:1px solid grey; display:none;}
+    .allmenusub2 a:hover{color:grey;}
+    .allmenusub2 .p1{font-size:9px;}
+    .allmenusub2 .p2{font-size:14px; font-weight:bold;}
+    .allmenusub2 .p3{font-size:13px;}
+    .SALEquick1{width:180px; height:210px; background-color:orange; margin:0 0 10px 10px;}
+    .SALEquick2{width:180px; height:40px; background-color:rgb(190, 190, 190); margin:0 0 10px 10px;}
+  </style>
+</head>
+<body style="overflow-x:hidden; overflow-y:auto;">
+  <div class="popup1"></div>
+  <div class="wrap">
+    <div class="popup2">
+      <a href="">
+        <img src="images/popupB.png" alt="">
+      </a>
+    </div>
+  <header>
+    <div class="header_01">
+    <div class="header_01_inner clear">
+      <ul class="headermainmenu">
+        <li><a href="">로그인</a>
+        </li>
+        <li><a href="">회원가입</a>
+        </li>
+        <li><a href="">장바구니</a>
+        </li>
+        <li class="headersubmenu1"><a href="">마이샵</a>
+          <ul class="headersubmenu">
+            <li><a href="">주문조회</a></li>
+            <li><a href="">배송조회</a></li>
+            <li><a href="">적립금</a></li>
+            <li><a href="">좋아요</a></li>
+            <li><a href="">쿠폰관리</a></li>
+            <li><a href="">내게시물</a></li>
+          </ul>
+        </li>
+        <li class="headersubmenu1"><a href="">커뮤니티</a>
+          <ul class="headersubmenu">
+            <li><a href="">공지사항</a></li>
+            <li><a href="">뉴스/이벤트</a></li>
+            <li><a href="">이용안내 FAQ</a></li>
+            <li><a href="">상품 사용후기</a></li>
+            <li><a href="">인형병원 서비스</a></li>
+            <li><a href="">상품 Q&A</a></li>
+            <li><a href="">인형병원 후기</a></li>
+          </ul>
+        </li>
+        <li><a href="">즐겨찾기</a>
+        </li>
+        <li><a href="">바로가기</a>
+        </li>
+      </ul>
+      <form class="search" action="index.html" method="post">
+        <input type="search">
+      </form>
+      <div class="icon1">
+        <a href=""><div class="box1"></div></a>
+        <a href=""><div class="box2"></div></a>
+        <a href=""><div class="box3"></div></a>
+        <a href=""><div class="box4"></div></a>
+      </div>
+    </div>
+  </div>
+
+    <div class="header_02">
+      <div class="header_02_inner clear">
+        <a href=""><div class="slide1"></div></a>
+        <a href=""><div class="logo"></div></a>
+        <div class="butt">
+          <a href=""><img src="images/heart2.png" id="heart2" alt=""></a>
+          <a href=""><img src="images/heart1.png" id="heart1" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header_03">
+      <div class="header_03_inner clear">
+        <a href=""><div class="allmenu_butt"></div></a>
+        <div class="allmenu">
+          <ul class="allmainmenu">
+            <li><a href="">NEW IN</a></li>
+            <li class="allmenusub_butt"><a href="">EZEN LABEL</a>
+              <ul class="allmenusub">
+                <li><a href="">PREMIUM</a></li>
+                <li><a href="">BASIC</a></li>
+                <li><a href="">EZEN BABY</a></li>
+              </ul>
+            </li>
+            <li class="allmenusub_butt"><a href="">곰인형</a>
+              <ul class="allmenusub">
+                <li><a href="">소형(20CM미만)</a></li>
+                <li><a href="">중형(20~40CM)</a></li>
+                <li><a href="">중대형(45~60CM)</a></li>
+                <li><a href="">대형(60CM이상)</a></li>
+              </ul>
+            </li>
+            <li class="allmenusub_butt"><a href="">동물인형</a>
+              <ul class="allmenusub">
+                <li><a href="">강아지</a></li>
+                <li><a href="">토끼</a></li>
+                <li><a href="">양</a></li>
+                <li><a href="">고양이</a></li>
+                <li><a href="">코끼리</a></li>
+                <li><a href="">원숭이</a></li>
+                <li><a href="">오리</a></li>
+                <li><a href="">돌고래</a></li>
+                <li><a href="">악어</a></li>
+                <li><a href="">해달</a></li>
+                <li><a href="">기린</a></li>
+                <li><a href="">돼지</a></li>
+                <li><a href="">상어</a></li>
+                <li><a href="">여우</a></li>
+                <li><a href="">호랑이</a></li>
+                <li><a href="">코알라</a></li>
+                <li><a href="">캥거루</a></li>
+              </ul>
+            </li>
+            <li class="allmenusub_butt"><a href="">빅사이즈</a>
+              <ul class="allmenusub">
+                <li><a href="">50CM</a></li>
+                <li><a href="">100CM</a></li>
+              </ul>
+            </li>
+            <li class="allmenusub_butt"><a href="">캐릭터인형</a>
+              <ul class="allmenusub">
+                <li><a href="">19곰테드(TED2)</a></li>
+                <li><a href="">일본 AMUSE(어뮤즈)</a></li>
+                <li><a href="">아기공룡둘리</a></li>
+                <li><a href="">포켓몬스터</a></li>
+                <li><a href="">무민(MOOMIN)</a></li>
+                <li><a href="">몰랑(MOLANG)</a></li>
+                <li><a href="">디즈니(Diseny)</a></li>
+                <li><a href="">신비아파트</a></li>
+                <li><a href="">보노보노</a></li>
+                <li><a href="">뽀롱뽀롱뽀로로</a></li>
+                <li><a href="">짱구는못말려</a></li>
+                <li><a href="">신서유기</a></li>
+                <li><a href="">카카오프렌즈</a></li>
+                <li><a href="">스밋코구라시</a></li>
+                <li><a href="">도라에몽</a></li>
+              </ul>
+            </li>
+            <li class="allmenusub_butt"><a href="">유아완구</a>
+              <ul class="allmenusub">
+                <li><a href="">애착인형</a></li>
+                <li><a href="">오가닉인형</a></li>
+                <li><a href="">안전벨트인형</a></li>
+                <li><a href="">태교인형</a></li>
+                <li><a href="">수유용품</a></li>
+                <li><a href="">신생아용품</a></li>
+                <li><a href="">교육완구</a></li>
+              </ul>
+            </li>
+            <li class="allmenusub_butt"><a href="">봉제소품</a>
+              <ul class="allmenusub">
+                <li><a href="">가방고리</a></li>
+                <li><a href="">봉제쿠션</a></li>
+                <li><a href="">바디필로우</a></li>
+                <li><a href="">목쿠션</a></li>
+                <li><a href="">파우치</a></li>
+                <li><a href="">동물모자</a></li>
+                <li><a href="">기타</a></li>
+              </ul>
+            </li>
+            <li><a href="">SALE</a></li>
+            <li><a href="">추가옵션</a></li>
+            <li><a href="">개인결제창</a></li>
+            <li><a href="">B2B기업전용</a></li>
+            <li><a href="">생산의뢰</a></li>
+            <li><a href="">인형병원</a></li>
+          </ul>
+        </div>
+
+        <div class="allmenu2">
+          <ul class="allmainmenu2">
+            <li class="allmenusub2li"><a href="">타임세일</a>
+              <ul class="allmenusub2">
+                <li>
+                  <a href=""><p class="p1">서두르세요~ 기간한정세일!</p><p class="p2">TIME SALE</p></a>
+                  <div class="SALEquick2"><p class="p3">타임 세일이 종료되었습니다</p></div>
+                  <div class="SALEquick1"></div>
+                </li>
+              </ul>
+            </li>
+            <li><a href="">카탈로그</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+</body>
+</html>
